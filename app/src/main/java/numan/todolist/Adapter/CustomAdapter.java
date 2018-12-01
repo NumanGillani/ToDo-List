@@ -28,8 +28,8 @@ import java.util.List;
 
 import numan.todolist.CreateTask;
 import numan.todolist.DatabaseHelper;
-import numan.todolist.R;
 import numan.todolist.MainActivity;
+import numan.todolist.R;
 
 import static numan.todolist.MainActivity.mDBHelper;
 

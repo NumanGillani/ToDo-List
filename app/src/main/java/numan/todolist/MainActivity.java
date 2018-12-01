@@ -1,7 +1,9 @@
 package numan.todolist;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -24,7 +26,9 @@ import android.widget.Toast;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
 import com.facebook.Profile;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -39,8 +43,6 @@ import java.util.List;
 
 import numan.todolist.Adapter.CustomAdapter;
 import numan.todolist.Adapter.RowItem;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
 
 import static numan.todolist.Adapter.CustomAdapter.myCreatedOn;
 import static numan.todolist.Adapter.CustomAdapter.myPriority;
@@ -294,5 +296,23 @@ public class MainActivity extends AppCompatActivity {
         Log.e("On Resume" , "Executed !");
         LoadTasks();
         super.onResume();
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.app_icon)
+                .setTitle("Close To-Do List?")
+                .setMessage("Are you sure you want to exit from Application?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }

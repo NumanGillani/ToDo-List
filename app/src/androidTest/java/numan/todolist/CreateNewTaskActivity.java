@@ -23,15 +23,13 @@ public class CreateNewTaskActivity {
     @Rule
     public ActivityTestRule<MainActivity> myNewTask = new ActivityTestRule<MainActivity>(MainActivity.class);
 
-    Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(CreateTask.class.getName(), null, false);
 
     @Test
     public void onClickCreateNewTaskButton() throws Exception {
         onView(withId(R.id.NewTask)).perform(click());
         onView(withId(R.id.input_title)).check(matches(isDisplayed()));
 
-        Activity secondActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 5000);
-        assertNotNull(secondActivity);
+
     }
 
 }
