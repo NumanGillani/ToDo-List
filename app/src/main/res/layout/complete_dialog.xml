@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:text="@string/sureMsg"
+        android:textSize="20sp"
+        android:fontFamily="@font/font" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cardviewbk">
+
+        <TextView
+            android:id="@+id/complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:text="Complete Task"
+            android:textSize="20sp"
+            android:fontFamily="@font/font" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:text="Cancel"
+            android:textSize="20sp"
+            android:fontFamily="@font/font" />
+
+    </LinearLayout>
+
+</LinearLayout>

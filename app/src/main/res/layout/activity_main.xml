@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:id="@+id/completeList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ListView
+            android:id="@+id/taskList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"/>
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Pay"
+            android:visibility="gone"
+            android:onClick="searchTrans"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+        <include layout="@layout/empty_layout"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_text"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/dark_text"
+            android:text="User Not LoggedIn"
+            android:fontFamily="@font/font"/>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxxsmall_text"
+            android:layout_marginBottom="5dp"
+            android:background="@color/dark_text"/>
+        <Button
+            android:id="@+id/NewTask"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Create New Task"
+            android:background="@color/yellow"
+            android:textColor="@color/grey"
+            android:onClick="CreateNewTask"
+            android:fontFamily="@font/font"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">To Do List</string>
+
+    <string name="task_title">Task Title</string>
+    <string name="create">Created On</string>
+    <string name="description">Task Details</string>
+    <string name="status">Status</string>
+
+    <string name="sorryMsg">Sorry, No Task Found</string>
+    <string name="completeMsg">This Task has been Completed !</string>
+    <string name="sureMsg">Are You Sure?</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="instructions">Instructions</string>
+    <string name="deleteAll">Delete Completed Tasks</string>
+    <string name="LoginGmail">Login Gmail</string>
+
+    <string name="facebook_app_id">737739686603810</string>
+    <string name="fb_login_protocol_scheme">fb737739686603810</string>
+
+
+</resources>

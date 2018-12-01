@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    app:cardCornerRadius="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp"
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/status_bg"
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:orientation="vertical"
+                    android:gravity="left|center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/large_text"
+                        android:textStyle="bold"
+                        android:text="@string/task_title"
+                        android:textColor="@color/dark_text"/>
+                    <TextView
+                        android:id="@+id/TaskTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mid_text"
+                        android:text="@string/task_title"
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/font"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create"
+                        android:textColor="@color/dark_text"
+                        android:textSize="@dimen/large_text"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/CreatedOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mid_text"
+                        android:text="@string/create"
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/font" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_weight="3"
+                    android:layout_marginLeft="4dp"
+                    android:orientation="vertical"
+                    android:gravity="left|center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/large_text"
+                        android:textStyle="bold"
+                        android:text="@string/description"
+                        android:textColor="@color/dark_text" />
+                    <TextView
+                        android:id="@+id/Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mid_text"
+                        android:text="@string/description"
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/font" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_marginRight="4dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/large_text"
+                        android:textStyle="bold"
+                        android:text="@string/status"
+                        android:textColor="@color/dark_text" />
+
+                    <TextView
+                        android:id="@+id/CurrentStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/mid_text"
+                        android:entries="@array/statusEntries"
+                        android:text="@string/status"
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/font"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonsLayout"
+                android:orientation="horizontal"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/completeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:textColor="@color/white"
+                    android:text="Complete"
+                    android:fontFamily="@font/font"/>
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="40dp"/>
+                <Button
+                    android:id="@+id/updateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:textColor="@color/dark_text"
+                    android:text="Update"
+                    android:fontFamily="@font/font"/>
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="40dp"/>
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey"
+                    android:textColor="@color/white"
+                    android:text="Delete"
+                    android:fontFamily="@font/font"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/completeText"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/completeMsg"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/white"
+                android:background="@color/megnato"
+                android:fontFamily="@font/font"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
